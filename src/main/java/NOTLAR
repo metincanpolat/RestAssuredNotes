@@ -1,0 +1,52 @@
+* URL adreslerinde + ve %20 boşluk anlamına gelir -> /films/?search=New%20Hope
+
+
+* PUT güncellemek için yolladığımız zaman eski verinin üzerine yazıyor,
+
+----------create response ---------
+"id": "63c981a9ffbbad288b62ecd3",
+    "name": "opcylUlW",
+    "description": "tanımlama",
+    "attachmentStages": [
+        "STUDENT_REGISTRATION",
+        "EXAMINATION"
+    ],
+    "schoolId": "6390f3207a3bcb6a7ac977f9",
+    "active": true,
+    "required": true,
+    "translateName": null,
+    "useCamera": false
+
+    -------update body-------------
+{
+    "attachmentStages": [
+        "CERTIFICATE",
+        "CONTRACT"
+    ],
+    "id": "63c981a9ffbbad288b62ecd3",
+    "name": "JDciQghu",
+    "schoolId": "6390f3207a3bcb6a7ac977f9"
+}
+
+    ---------update response---------
+
+        "id": "63c981a9ffbbad288b62ecd3",
+        "name": "JDciQghu",
+        "description": null,
+        "attachmentStages": [
+            "CERTIFICATE",
+            "CONTRACT"
+        ],
+        "schoolId": "6390f3207a3bcb6a7ac977f9",
+        "active": false,
+        "required": false,
+        "translateName": null,
+        "useCamera": false
+    }
+
+    yani değiştirmek için tüm veriyi değil sadece değiştirmek istediklerimizi yolladığımız zaman yollamadıklarımız da etkileniyor.
+    Görüldüğü üzere boolean veriler true dan false a döndü.
+    lokal update için patch kullanıyoruz. Onu da kabul edip etmediğini kontrol etmemiz gerekecek. Campus de bu örnekte kabul etmiyor.
+
+
+

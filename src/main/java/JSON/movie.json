@@ -1,0 +1,11 @@
+{
+  "id" : 1,
+  "title" : "Matrix",
+  "actors" : ["Keanu Revess","Cariie Anne Moss"],
+  "publish_year" : 1999,
+  "gendre" : {
+    "id" : 5,
+    "name" : "Action"
+  },
+  "rating" : 8.3
+}
